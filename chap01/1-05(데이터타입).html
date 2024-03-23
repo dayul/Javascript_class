@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>데이터 타입(String, Object, Array, Undefined, Null</title>
+</head>
+<body>
+    <script>
+        /*문자열*/
+        let name1 = "홍길동";
+        let name2 = '홍길순';
+        // let str1 = "저의 이름은 " + name1 + " 입니다.";
+
+        let str1 = "저의 이름은 \"" + name1 + "\"입니다.";
+        str1 = '저의 이름은 "홍길동" 입니다.';
+        console.log(str1);
+
+        let str3 = "저의 이름은 '홍길동' 입니다.";
+        console.log(str3);
+
+        let str4 = "저의 이름은 \\홍길동\\ 입니다.";
+        console.log(str4);
+
+        /*숫자 : Number*/
+        let x = 3;
+        let y = 3.14;
+        console.log(x + y);
+
+        let u1;
+        console.log(u1);    // undefined : 값이 정의되지 않았다는 뜻(출력됨)
+
+        let u2 = undefined;     // 값으로 넣을 수 있음
+        console.log(u2);
+
+        /*Null*/
+        let n1 = null;
+        console.log(n1);    // null 출력됨
+
+        /*객체 - Object*/
+        let person1 = {};   // 1. 객체 선언후 초기화
+        person1.firstName = "홍";
+        person1.lastName = "길동";
+        person1.age = 20;
+
+        console.log(person1.age);
+        console.log(person1);
+
+        let person2 = {         // 2. 객체 선언과 동시에 초기화
+            firstName: "길순",
+            lastName: "홍",
+            age:10
+        }
+        console.log(person2);
+
+        let person3 = {};       // 3. 코딩테스트 할 때 많이 쓰임
+        person3["firstName"] = "철수";
+        person3["lastName"] = "김";
+        person3["age"] = 10;
+
+        person2.email = "hong@gmail.com";   // 객체에 멤버변수 추가
+        console.log(person2);
+
+        console.log(person1.age);
+        console.log(person1.firstName);
+        person1.school = "미림";
+        console.log(person1);
+        document.write(person1.firstName);
+
+        /*배열 - Array*/
+        let car = ["현대", "기아", "테슬라"];
+        console.log(car[0]);
+        console.log(car[1]);
+        console.log(car[2]);
+        
+        let num = [2, 3, 4, 7, 10];
+        console.log(num[0]);
+        console.log(num[2]);
+        console.log(num[4]);
+
+        let arr1 = ["현대", 3, undefined, null];
+        console.log(arr1);
+
+        let arr2 = [person1, person2, person3];
+        console.log(arr2[0]);
+        console.log(arr2);
+
+        let arr3 = [];
+        arr3[0] = 1;
+        arr3[1] = "미림";
+        console.log(arr3);
+
+        let arr4 = [];
+        arr4.push(2024);    // 배열에 요소 추가 : push()
+        arr4.push("다율");
+        arr4.push(159.7);
+        arr4.push(undefined);
+        arr4.push(null);
+        console.log(arr4);
+
+        for(var i = 0; i < arr4.length; i++) {
+            console.log(arr4[i]);
+            document.write(arr4[i] + "<br>");
+        }
+
+        /*Boolean 참, 거짓 - true or false*/
+        let isAdult = true;
+        let num1 = 5;
+        let num2 = 7;
+        console.log(num1 > num2);
+
+        console.log(typeof num1);       // 변수들의 타입을 알려줌 : typeof
+        console.log(typeof isAdult);
+        console.log(typeof person1);
+        console.log(typeof arr4);       // Javascript에서는 배열을 Object로 처리함
+
+    </script>
+</body>
+</html>
