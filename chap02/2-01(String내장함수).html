@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>String 내장 함수(중요!!)</title>
+</head>
+<body>
+    <script>
+        // 1. length : 문자열의 길이를 return
+        var txt = "Hello~~"
+        console.log(txt.length);
+
+        // 2. indexOf : 특정한 문자열의 위치값을 찾음(첫번째로 나오는)
+        var str = "Please locate where 'locate'";
+        console.log(str.indexOf("locate"));     // 출력 값 : 7
+        console.log(str.indexOf("choo"));       // 출력 값 : -1 (값이 없다는 뜻)
+
+        if(str.indexOf("locate") > -1) {
+            console.log("locate 문자 발견!");
+        } 
+
+        // 3. lastIndexOf : 위와 같지만 뒤에서부터 찾음
+        console.log(str.lastIndexOf('locate'));  // 출력 값 : 21
+
+        // 4. search : indexOf와 같은 기능
+        console.log(str.search("locate"));      // 출력 값 : 7
+
+        // 5. slice : (인덱스, 인덱스-1) 문자 인덱스로 문자를 찾음
+        var str = "Apple, Banana, Kiwi";
+        console.log(str.slice(7, 13));          // 7부터 13-1까지 -> 12까지, Banana
+        console.log(str.slice(7));              // 7부터 문자열 끝까지
+        console.log(str.slice(-12, -6));        // -12번째부터 -6-1 -> -7까지 (뒤는 -1부터 시작)
+        console.log(str.slice(-12));            // -12부터 끝까지
+
+        // 6. substring : slice와 같은 기능
+        console.log(str.substring(7, 13));
+
+        // 7. substr : (인덱스, 글자수) 인덱스와 글자수로 문자를 찾음
+        console.log(str.substr(7, 6));          // 7번째부터 6글자 출력, Banana
+
+        var person1 = "2007-08-28";
+        console.log(person1.indexOf("-"));      // 4
+        console.log(person1.substring(0, person1.indexOf("-")));   // 2007
+
+        // 8. replace : 맨 처음에 나오는 문자열 변경(대소문자 구분함)
+        var str1 = "Please visit here";
+        var str2 = str1.replace("here", "there");   // here을 there로 변경
+        console.log(str2);
+
+        var str3 = "Please visit here here here";
+        var str4 = str3.replace("here", "there"); 
+        console.log(str4);
+
+        // 8-1 : 정규표현식 맛보기
+        var str5 = "Please visit Here hEre heRe";
+        var str6 = str5.replace(/here/gi, "there");     
+        // g = global (모든 here이 there로 변경됨)
+        // i = ignore (대소문자를 무시하고 모든 here을 there로 변경)
+        console.log(str6);
+
+        // 9. toUpperCase : 모두 대문자로 변경
+        var str7 = "Please visit Here hEre heRe";
+        console.log(str7.toUpperCase());
+
+        // 10. toLowerCase : 모두 소문자로 변경
+        var str8 = "Please visit Here hEre heRe";
+        console.log(str8.toLowerCase());
+
+    </script>
+</body>
+</html>
