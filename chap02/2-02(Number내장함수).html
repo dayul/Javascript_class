@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Number 내장함수</title>
+</head>
+<body>
+    <script>
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(Number.MIN_SAFE_INTEGER);
+
+        // 1. toString : 숫자를 문자열로 바꿈
+        var x1 = 123;
+        console.log(x1 + 1);
+        console.log(x1.toString() + 1);
+        console.log(x1.toString(2));    // 2진수로 변환되어 나옴
+        console.log(x1.toString(8));    // 8진수로 변환되어 나옴
+
+        // 2. toFixed : 지정된 소수점 자릿수까지 반올림으로 표기
+        var x2 = 123999.562243;
+        console.log(x2.toFixed(2));    // 소수점 2자리까지 반올림, 123999.56
+
+        // 3. toPrecision :  정수까지 포함된 자릿수로 계산
+        var x3 = 9.567;
+        console.log(x3.toPrecision(2));     // 9.5
+
+        // 4. Number : 문자열을 숫자로 바꿈
+        var x4 = Number("10");
+        console.log(x4 + 1);
+
+        var x5 = Number(true);
+        console.log(x5);        // 1로 변환됨
+
+        var x6 = Number("        10        ");      // 숫자로 변환됨
+        console.log(x6);
+
+        console.log(Number("최"));      // NaN
+        // (13,45) - 쉼표 안됨
+        // (12 56) - 공백 안됨
+
+
+    </script>
+</body>
+</html>

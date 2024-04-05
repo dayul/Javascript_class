@@ -64,6 +64,36 @@
         var str8 = "Please visit Here hEre heRe";
         console.log(str8.toLowerCase());
 
+        // 11. concat : 문자열 연결
+        var txt1 = "Hello";
+        var txt2 = "World";
+        var txt3 = txt1 + " " + txt2;
+        console.log(txt3);
+
+        console.log(txt1.concat(" ", txt2, "Hoo", "Happy"));
+
+        // 12. padStart(방 개수, 남았을 때 채울 것) : 특정 자릿수를 통일하기 위해 사용
+        var str11 = "1234";
+        // console.log(str11.padStart(8,0));   // 00001234
+        console.log("C-" + str11.padStart(8,"*"));    // C-****1234
+
+        var str12 = "5";
+        console.log(str12.padStart(2, 0));  // 05 (날짜 처리)
+        console.log(str12.padEnd(4, 0));    // 5000
+
+        // 13. CharAt : 특정한 글자의 위치값의 내용을 찾음
+        var str13 = "Hello World";
+        console.log(str13.charAt(0));   // H
+
+        // 14. split : 특정한 키를 기준으로 리스트(배열)를 만들어줌
+        var tags = "기계식,블루투스,키보드";
+        var arr1 = tags.split(",");
+        console.log(arr1);
+
+        var birthday = "2007-08-28";
+        var arr2 = birthday.split("-");
+        console.log(arr2);
+
     </script>
 </body>
 </html>

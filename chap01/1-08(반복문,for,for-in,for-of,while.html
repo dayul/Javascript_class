@@ -41,7 +41,51 @@
             console.log(num);
         }
 
+        // 자바의 클래스 = 자바스크립트의 오브젝트
+        var person = {
+            firstName : "길동",
+            lastName : "홍",
+            age : 24
+        }
+        console.log(person.firstName);
+        console.log(person.lastName);
+        console.log(person.age);
         
+        for(var i in person) {
+            console.log(i);     // key값 출력
+            console.log(person[i]);     // value값 출력
+        }
+
+        var cars = ["현대", "기아", "볼보", "벤츠"];
+        for(var car in cars) {
+            console.log(car);       // 배열의 index값 출력
+        }
+        for(var car of cars) {
+            console.log(car);       // 배열의 값 출력
+        }
+
+        var numbers = [43, 23, 5, 7, 99, 12, 19];
+        // 나중에 다시 설명함. 꼭 설명함.
+        numbers.forEach(function() {
+
+        });
+
+        // while문
+        var i = 1;
+        var total = 0;
+        while(i <= 10) {
+            total += i;
+            i++;
+        }
+        console.log(total);
+
+        // do-while문
+        var i = 1;
+        var total = 0;
+        do {
+            total += i;
+            i++;
+        } while(i <= 10);
 
     </script>
 </body>
