@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Boolean 내장객체</title>
+</head>
+<body>
+    <script>
+        var x1 = true;                  // false of true (call by value)
+        var y1 = new Boolean(true);     // Boolean객체 (call by Reference)
+        console.log(typeof x1);     // boolean
+        console.log(typeof y1);     // object (클래스)
+
+        console.log(x1 === y1);      // false, ==는 출력값만 가지고 비교
+
+        var x2 = "abc";
+        var y2 = new String("abc");
+        console.log(x2 === y2);     // false
+        console.log(Boolean(10 > 9));   // object 타입
+        console.log(10 > 9);            // boolean 타입
+
+        var x = 0;
+        console.log(x);
+        console.log(Boolean(x));    // false
+
+        var x = "";         // 값을 할당하지 않았기 때문에
+        console.log(Boolean(x));    // false
+    </script>
+</body>
+</html>
