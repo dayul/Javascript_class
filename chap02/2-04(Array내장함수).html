@@ -150,7 +150,19 @@
         });
         console.log(total);
         
+        // map!!!!!!!!! : 필터랑 비슷함! 근데 중요!!
+        var userList = [
+            {firstName:"재석", lastName:"유", email:"yu@email.com"},
+            {firstName:"종국", lastName:"김", email:"kim@email.com"},
+            {firstName:"세찬", lastName:"양", email:"yang@email.com"},
+            {firstName:"석진", lastName:"지", email:"ji@email.com"}
+        ]
+        
+        var userList2 = userList.map(function(user) {
+            return {fullName:user.lastName + user.firstName, FN:user.firstName, lN:user.lastName}
+        });
 
+        console.log(userList2);
     </script>
 </body>
 </html>
