@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = arr;
+
+            // 방법1 : for문 쓰는 방법
+
+            // 방법2 : reduce() 이용
+            let sum1 = arr.reduce(function(a,c) {
+                return a + c;
+            })
+
+            // 방법3 : arrow function
+            let sum = arr.reduce((a,b) => a + b);
+
+            for(var i=0; i<arr.length; i++) {
+                for(var j = i+1; j < arr.length; j++) {
+                    if(arr[i] + arr[j] === (sum - 100)) {
+                        arr.splice(j, 1)
+                        arr.splice(i, 1)
+                    }
+                }
+            }
+            
+            return answer;
+        }
+
+        var arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+        console.log(solution(arr));
+
+    </script>
+</body>
+</html>
