@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(s, t) {
+            let answer = 0;
+
+            // 방법 1 : for문 이용
+            for(let x of s) {
+                answer += (x === t) ? 1 : 0;
+            }
+
+            // 방법 2 : 내장함수 이용
+            answer = s.split(t).length - 1;
+
+            // 친구가 푼 방법
+            s.split("").filter(a => {
+                if(a === t)  answer++;
+            })
+
+
+            return answer;
+        }
+
+        let str = "COMPUTERPROGRAMING";
+        console.log(solution(str, 'R'));
+
+    </script>
+</body>
+</html>
