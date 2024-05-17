@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Window 객체</title>
+</head>
+<body>
+    <script>
+        // window 내장객체
+        // console.log(window);
+        // alert("ID를 입력해주세요");
+
+        // var yn = confirm("정말로 탈퇴하시겠습니까?");
+        // console.log(yn);        // true, false
+
+        // if(confirm("정말로 탈퇴하시겠습니까?")) {
+        //     // 탈퇴 처리
+        //     console.log("회원 탈퇴");
+        // }
+
+        // var txt = prompt("당신이 좋아하는 연예인은?");
+        
+        // if(txt === null) {
+        //     console.log("취소");
+        // }
+        // else if(txt === "") {
+        //     console.log("공백");
+        // }
+        // else {
+        //     console.log(txt);
+        // }
+
+        // window.open("http://naver.com");    // 팝업 창
+        // window.print()       // 현재 페이지를 출력
+
+        // setTimeout (1000 = 1초)  //: 지정한 시간 뒤에 ..
+        // setTimeout(function(){
+        //     console.log("3초 지났다!");
+        // }, 3000)
+
+        // var i = 0
+        // setInterval(function(){     //: 지정한 시간 마다..
+        //     console.log("3초마다!" + i);
+        //     i++;
+        // }, 3000)
+
+        var i = 0
+        var fnc = setInterval(function(){     //: 지정한 시간 마다..
+            console.log("3초마다!" + i);
+            i++;
+
+            if(i === 10) {
+                clearInterval(fnc);         // 함수 종료
+            }
+        }, 3000)
+
+    </script>
+</body>
+</html>
