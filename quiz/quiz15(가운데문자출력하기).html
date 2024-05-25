@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>가운데 문자 출력하기</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            let answer = "";
+            let mid = Math.floor(s.length / 2);
+
+            // substring(), substr() 사용
+            if(s.length % 2 == 1) {
+                // answer = s.substring(mid, mid+1);
+                answer = s.substr(mid, 1);
+            }
+            else {
+                // answer = s.substring(mid-1, mid+1);
+                answer = s.substr(mid-1, 2);
+            }
+            
+            return answer;
+        }
+
+        console.log(solution("study"));
+        console.log(solution("good"));
+        console.log(solution("teacher"));
+        console.log(solution("length"));
+    </script>
+</body>
+</html>
