@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>this 키워드</title>
+</head>
+<body>
+    <!-- Element안에서의 this는 Element을 가리킴 -->
+    <button onclick="this.style.backgroundColor='red'">클릭1</button>       <!-- button 내에서의 this는 button을 가리킴-->
+    <button onclick="callFunc(this)">클릭2</button>
+    <select onchange="changeSelect(this)">
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+    </select>
+
+    <script>
+        // console.log(this);           // this는 window 객체를 지칭
+        // console.log(window);
+        // window.alert();
+        // this.alert();
+
+        function fullName(obj) {
+            alert("Hello");
+            console.log(this);      // 함수 내에서도 window 객체를 지칭
+        }
+        // fullName()
+
+        function callFunc(obj) {
+            console.log(obj);       // <button onclick="callFunc(this)">클릭2</button> : 자기 자신을 출력
+        }
+
+        function changeSelect(obj) {       
+            console.log(obj);             // select 자신을 출력
+            console.log(obj.value);       // value 값이 출력
+        }
+
+        // object에 함수를 넣을 수 있음
+        var person = {
+            firstName : "길동",
+            lastName : "홍",
+            fullName : function() {
+                return this.firstName + " " + this.lastName;    // this는 object(person) 자신을 가리킴
+            }
+        }
+        console.log(person.lastName);
+        console.log(person.fullName());
+
+    </script>
+</body>
+</html>
