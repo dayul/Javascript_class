@@ -5,19 +5,53 @@
 <body>
     <script>
         function solution(s) {
-            let answer = "";
+            // let answer = "";
 
-            for(let i of s) {
-                if(answer.indexOf(i) === -1) {
-                    answer += i;
-                }
+            // console.log(s.indexOf('k'), 1);   - 1번째부터 찾는 것
+            // 선생님 방법
+            // for(let i = 0; i < s.length; i++) {
+            //     if(s.indexOf(s[i]) == i)        // 인덱스 값과 i의 값의 인덱스를 비교
+            //         answer += s[i];             // 같다면 없는 값이므로 누적
+            // }
+
+            // 내 방법
+            // for(let i of s) {
+            //     if(answer.indexOf(i) === -1) 
+            //         answer += i;
+            // }
+
+            // [...s].filter(a => {
+            //     if(answer.search(a) === -1)
+            //         answer += a;
+            // })
+
+            // 이 외에 replace()
+
+
+            // prompt에서 값 받아서 문자 세기
+
+            // 선생님 방법
+            let answer = 0;
+
+            let word = prompt("찾고자 하는 문자 하나를 입력하세요 ");
+            let pos = s.indexOf(word);
+            while(pos !== -1) {
+                answer++;
+                pos = s.indexOf(word, pos+1);
             }
+
+
+            // 내 방법
+            // for(let i of s) {
+            //     if(i.indexOf(word) !== -1)   answer++;
+            // }
+            // alert(answer);
 
             return answer;
         }
 
         console.log(solution("ksekkset"));
-        console.log(solution(""));
+        // console.log(solution("good"));
 
     </script>
 </body>
