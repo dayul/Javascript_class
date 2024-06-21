@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // function myfunction() {
+        //     // local Scope : 지역 변수
+        //     var carName1 = "기아";
+        //     console.log(carName1);
+        // }
+
+        // // console.log(carName1);      // ReferenceError
+        // myfunction();
+
+        // Global Scope : 전역 변수
+        var carName2 = "현대";
+        myfunction2();      // 결괏값이 나옴! : 컴파일 시 함수를 먼저 컴파일 함
+
+        function myfunction2() {
+            console.log(carName2);
+        }
+        myfunction2();
+
+        myfunction3();      // 변수이기 떼문에 error
+        var myfunction3 =  function() {
+            console.log("myfunction3 호출");
+        }
+
+        
+    </script>
+</body>
+</html>

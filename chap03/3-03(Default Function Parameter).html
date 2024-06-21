@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Default Function Paremeter</title>
+</head>
+<body>
+    <script>
+        // function say1(message) {
+        //     alert(message);
+        // }
+        
+        // say1("hello");
+        // say1();         // undefined
+
+        // function say2(message) {
+        //     if(message != undefined) {
+        //         console.log(message);
+        //     }
+        //     else {
+        //         console.log("매개변수가 없습니다.");
+        //     }
+        // }
+        // say2("hi");
+        // say2();
+
+        // function plus1(a, b) {
+        //     console.log(a + b);
+        // }
+        // plus1(1, 2);
+        // plus1(1);       // NaN
+
+        // Default Function Parameter
+        // function say3(message = "매개변수가 없습니다.") {
+        //     console.log(message);
+        // }
+        // say3("here");   // here
+        // say3();         // 매개변수가 없습니다.
+
+        function plus2(a = 0, b = 0) {
+            console.log(a + b);
+        }
+        plus2();           
+        plus2(1);
+        plus2(1, 2);
+    </script>
+</body>
+</html>
