@@ -1,0 +1,51 @@
+<html>
+
+  <head>
+    <title>점수계산</title>
+  </head>
+
+  <body>
+    <script>
+      function solution(scores) {
+        let answer = 0;
+        let count = 0;
+
+        // 내 풀이
+        scores.forEach(s => {
+          if (s === 1) 
+            answer += ++count;
+          else 
+            count = 0;
+          }
+        )
+
+        // 선생님 풀이
+        // for (let x of arr) {
+        //   if (x === 1) {
+        //     cnt++;
+        //     answer += cnt;
+        //   }
+        //   else cnt = 0;
+
+        // }
+
+        return answer;
+      }
+
+      let scores = [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+      console.log(solution(scores));
+    </script>
+  </body>
+
+</html>
