@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>등수 구하기</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            // let answer = [];
+            // 배열 방 갯수 지정
+            let answer = Array.from({length:s.length}, ()=> 1);
+
+            for(let i in s) {
+                answer[i] = 1;
+                for(let j in s) {
+                    if(s[i] < s[j]) 
+                        answer[i]++;
+                }
+            }
+
+            return answer;
+        }
+
+        // let scores = [87, 89, 92, 100, 76]
+        let scores = [92, 92, 92, 100, 76]
+        console.log(solution(scores));
+
+    </script>
+</body>
+</html>
