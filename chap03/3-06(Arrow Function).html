@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        function hello1() {
+            console.log("hello World 1");
+            return "헬로우 월드 2";
+        }
+        console.log(hello1());          // return 하는 값이 없으므로 undefined
+                                        // return 값이 있으면 출력
+
+        // var hello2 = function() {
+        //     console.log("hello World 2");
+        //     return "헬로우 월드 2"
+        // }
+        // hello2();
+
+        // => arrow function
+        // var hello3 = () => {
+        //     console.log("hello World 3");
+        //     return "헬로우 월드 3"
+        // }
+        // hello3();
+
+        // var hello4 = () => {
+        //     return "헬로우 월드 4"
+        // }
+        // console.log(hello4());
+
+        // var hello5 = () => "헬로우 월드 5";
+        // console.log(hello5());
+
+        // var hello4 = (name) => {
+        //     return "헬로우 월드 4" + name;
+        // }
+        // console.log(hello4("홍길동"));
+
+        // var hello6 = (name) => `헬로우 월드 5 ${name}`;
+        // console.log(hello6("홍길동"));
+
+        // var hello7 = (fN, lN) => `헬로우 월드 7 ${fN, lN}`;
+        // console.log(hello7("홍길동", "ㅎㅎ"));
+
+        var hello8 = fN => `헬로우 월드 8 ${fN}`;
+        console.log(hello8("홍길동"));
+    </script>
+</body>
+</html>

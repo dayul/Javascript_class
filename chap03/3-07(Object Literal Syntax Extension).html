@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Object Literal Syntax Extension</title>
+</head>
+<body>
+    <script>
+    // Object Literal Syntax Extension : 이미 선언된 Object의 key값을 동적으로 할당
+    // JavaScript는 Object(객체)
+    // Java의 class
+    // C언어의 구조체
+
+    // var person = {
+    //     firstName : "길동", 
+    //     lastName : "홍"
+    // }
+    // console.log(person);
+
+    // var first = "순신";
+    // var last = "이";
+    // var person = {
+    //     firstName : first, 
+    //     lastName : last
+    // }
+    // console.log(person);
+
+    var type1 = "name";
+    var type2 = "age";
+    var score = {
+        [type1] : "홍",
+        [type2] : 23
+    }
+    console.log(score);
+
+    // object에 key-value 추가
+    score.grade = 2;
+    console.log(score);
+    
+    var type3 = "성적";
+    score[type3] = 2;
+    console.log(score);
+
+    </script>
+</body>
+</html>
