@@ -1,0 +1,28 @@
+<html></html>
+<head>
+    <title>Object Destructuring</title>
+</head>
+<body>
+    <script>
+        // Java의 class
+        function getPerson() {
+            return {
+                firstName : "길동",
+                lastName : "홍",
+                age : 23,
+                email : "hong@gmail.com",
+                city : "Seoul",
+                country : "Chosun"
+            };
+        }
+
+        var per = getPerson();
+        console.log(per);
+        console.log(per.lastName, per.firstName);
+
+        var {firstName, lastName} = getPerson();
+        console.log(firstName, lastName);
+
+    </script>
+</body>
+</html>
