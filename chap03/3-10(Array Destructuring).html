@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Array Destructuring</title>
+</head>
+<body>
+    <script>
+        function getScores() {
+            return [70, 80, 90];
+        }
+
+        var scores = getScores();
+        console.log(scores);
+        console.log(scores[0]);
+
+        // Array Destructuring
+        var [x, y, z] = getScores();
+        console.log(x);
+        console.log(y);
+
+        function getLocations() {
+            // 위도(latitude), 경도(longitude)
+            return [123.12, 245.23]
+        }
+
+        var [latitude, longitude] = getLocations();
+        console.log(latitude);
+
+    </script>
+</body>
+</html>

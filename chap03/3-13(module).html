@@ -1,0 +1,33 @@
+<html>
+
+  <head>
+    <title>module</title>
+  </head>
+
+  <body>
+    <!-- <script src="/scripts/3-13(module).js"></script> <script> log("안녕하세요!"); error("에러!"); </script> -->
+
+    <!-- 효율성이 더 좋음(필요한 함수만 가져옴) -->
+    <script type="module">
+      import {log, error} from "/scripts/3-13(module).js"
+      log("하이!");
+      error("신기해!");
+    </script>
+
+    <script type="module">
+      import {error} from "/scripts/3-13(module).js"
+    //   log("하이!");              // import 하지 않았으므로 error
+      error("신기해!");
+    </script>
+
+    <script type="module">
+        import {PI, log} from "/scripts/3-13(module).js"
+        log(PI);
+    </script>
+
+    <script src="/scripts/3-13(ref).js" type="module">
+        
+    </script>
+  </body>
+
+</html>
