@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>팰린드롬, 회문문자열1</title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "YES";
+            str = str.toLowerCase();
+
+            // 1. 선생님 방법
+            // 문자열을 배열처럼 이용 가능
+            let len = str.length;
+            for(let i = 0; i < Math.floor(len / 2); i++) {
+                if(str[i] !== str[len - 1 - i]) 
+                    answer = "NO";
+            }
+            
+            // 2. reverse() 이용
+            // if(str.split("").reverse().join("") !== str) answer = "NO";
+
+            return answer;
+        }
+
+        let str = "gooG";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

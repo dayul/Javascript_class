@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>팰린드롬, 회문문자열2</title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "YES";
+            let len = answer.length;
+
+            // 정규 표현식
+            str = str.toLowerCase().replace(/[^a-z]/g, "");
+            // ^ : not
+            // /g : 전체
+
+            // 1. reverse() 이용
+            // if(str.split("").reverse().join("") !== str) answer = "NO";
+
+
+            // 2. 직접 비교
+            for(var i = 0; i < Math.floor(len / 2); i++) {
+                if(str[i] !== str[len - i - 1]) answer = "NO";
+            }
+
+            return answer;
+        }
+
+        let str = "found77, Time^ study, Yduts; emit, 9Dunof";
+        console.log(solution(str));
+
+    </script>
+</body>
+</html>
