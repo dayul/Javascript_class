@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Try Catch finally</title>
+</head>
+<body>
+    <script>
+        try {
+            console.lg("1.");
+        }
+        catch(err) {
+            console.log(err.name);
+            console.log(err.message);
+        }
+        console.log("2");
+
+        // throw를 사용하여 강제로 예외 발생
+        var x = "";
+        
+        try {
+            if(x === "") throw "empty";
+            var y = y + 3;
+            console.log(y);
+        }
+        catch(err) {
+            console.log(`x is ${err}`);
+        }
+        finally {
+            console.log("exception 우뮤와 상관없이 무조건 실행됨");
+        }
+
+;    </script>
+</body>
+</html>ㄴ

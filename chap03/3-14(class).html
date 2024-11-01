@@ -36,13 +36,36 @@
 
         } 
 
-        let c = new Car("아이오닉", "2021", "e", 4000);
-        console.log(c.getModelName());
-        console.log(c.getModelYear());
-        console.log(c.getPrice());
-        c.setPrice(3500);
-        console.log(c.getPrice());
+        // let c = new Car("아이오닉", "2021", "e", 4000);
+        // console.log(c.getModelName());
+        // console.log(c.getPrice());
+        // c.setPrice(3500);
+        // console.log(c.getPrice());
         
+        // let c1 = new Car("제네시스", "2022", "s", 5000);
+        // c1.setPrice(100);
+        // console.log(c1.getPrice());
+
+        class ElectronicCar extends Car {
+            constructor(modelName, modelYear, price, time) {
+                super(modelName, modelName, "e", price);
+                this.time = time;
+            }
+
+            getTime() {
+                return this.time;
+            }
+
+            setTime(time) {
+                this.time = time;
+            }
+        }
+
+        let e = new ElectronicCar("아이오닉", "2023", 6000, 60);
+        console.log(e.getModelName());
+        console.log(e.getPrice());
+        console.log(e.getType());
+        console.log(e.getTime());
     </script>
 </body>
 </html>
