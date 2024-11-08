@@ -4,6 +4,7 @@
 </head>
 <body>
     <script>
+        // 참고 웹 사이트 : https://www.w3schools.com/jsref/jsref_obj_regexp.asp
         // 정규 표현식 형식: /Pattern/modifier
 
         // var patt = /World/ig;
@@ -61,14 +62,39 @@
         // console.log(str9.match(patt7));
 
         // n* : n이 zero or more
-        var str10 = "HellooOo World";
-        var patt8 = /lo*/g;             // l, loo, l 을 찾음
-        console.log(str10.match(patt8));
+        // var str10 = "HellooOo World";
+        // var patt8 = /lo*/g;             // l, loo, l 을 찾음
+        // console.log(str10.match(patt8));
 
         // n? : n이 zero or one
-        var str11 = "1, 100, and 1000 or 1111";
-        var patt9 = /10?/g;                     // 1은 필수, 0은 있어도 되고 없어도 됨
-        console.log(str11.match(patt9));        // 1, 10, 10, 1, 1, 1, 1
+        // var str11 = "1, 100, and 1000 or 1111";
+        // var patt9 = /10?/g;                     // 1은 필수, 0은 있어도 되고 없어도 됨
+        // console.log(str11.match(patt9));        // 1, 10, 10, 1, 1, 1, 1
+
+        // 유효성 체크
+        // 실무 예시 : 우편번호 5자리
+        // 32543 : 다섯자리인지, 다섯자리 모두가 숫자인지 판별
+        // var patt10 = /\d{5}/;         // 숫자 5자리
+        // var postalCode = "23452";                    // true
+        // var postalCode = "P234521111";                  // true : 주어진 문자 안에 연속 5글자가 있으므로
+        // console.log(patt10.test(postalCode));           // test() :  true or false로 확인
+
+        // var patt11 = /^\d{5}$/;         // 숫자로 시작하고, 숫자 5자리, $로 끝임을 알려줌
+        // var postalCode = "P23452";                          // false
+        // var postalCode = "P234521111";                  // false
+        // console.log(patt11.test(postalCode));           // test() :  true or false로 확인
+
+        // 핸드폰 번호 : 010-1234-5678
+        // var patt12 = /^(010)-\d{4}-\d{4}$/;         // 010으로 시작-숫자 4자리-숫자 4자리로 끝나도록
+        // var tel = "010-9442-5232";                  // true
+        // console.log(patt12.test(tel));
+
+        // 이메일 주소 : dychoo79@gmail.com
+        var patt13 = /^\w+([._-]?\w+)*@\w+(.\w{2,3})+$/;       
+        // 문자로 시작하는데 중간에 기호들이 와도 되고 안 와도 되지만 문자로 끝나도록, 중간에 @...(그냥 이런게 있다고 하심)
+        var mail = "dychoo79@gmail.com";
+        console.log(patt13.test(mail));
+
     </script>
 </body>
 </html>
