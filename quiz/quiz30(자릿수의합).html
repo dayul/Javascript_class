@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>자릿수의 합</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = 0, max = Number.MIN_SAFE_INTEGER;
+
+            // 선생님 방법
+            for(let x of arr) {
+                // 1. while문 이용
+                // let sum = 0, temp = x;
+                // while(temp) {
+                //     sum += temp % 10;
+                //     temp = Math.floor(temp / 10);
+                // }
+
+                // 2. 내장함수 이용
+                // a의 초깃값을 0으로 지정
+                let sum = x.toString().split("").reduce((a, b)  => a + Number(b), 0);
+
+                if(sum > max) {
+                    max = sum;
+                    answer = x;
+                }
+                else if(sum === max) {
+                    if(answer < x)
+                        answer = x;
+                }
+            }
+
+
+            // 내 방법
+            // for(i in arr) {
+            //     var num = arr[i].toString().split("");
+
+            //     num = num.reduce((acc, cur) => {
+            //         return acc + parseInt(cur);
+            //     }, 0);
+            //     console.log(num);
+                
+            //     if(max < num) {
+            //         max = num;
+            //         answer = arr[i];
+            //     }
+            //     else if(max === num) {
+            //         if(answer < arr[i]) 
+            //             answer = arr[i];
+            //     }
+            // }
+
+            return answer;
+        }
+
+        let arr = [7, 460, 128, 603, 40, 521, 137, 123, 1200];
+        console.log(solution(arr));
+
+    </script>
+</body>
+</html>
