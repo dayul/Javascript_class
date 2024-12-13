@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>HTML event control</title>
+</head>
+<body>
+    focus: blur;
+    <br/>
+    <input type="text" id="text1" onfocus="doFocus()"  onblur="doBlur()">
+    <br />
+
+    <input type="button" value="클릭" onclick="doClick()">
+
+    <br />
+    <br />
+    select : 
+    <select id="select1" onchange="doChange1(this)">
+        <option value="KO">한국</option>
+        <option value="CH">중국</option>
+        <option value="JP">일본</option>
+    </select>
+    <br />
+    <br />
+
+    KeyDown : 
+    <input type="text" id="text2" onkeydown="doKeydown(event)">
+    <input type="button" value="조회" onclick="doSearch()">
+    <br />
+
+    <script>
+        // const btn = document.get("");
+        // document.addEventListener("click")
+
+        function doClick() {
+            alert("[버튼] 클릭");
+        }
+
+        function doFocus() {
+            console.log("doFocus() 호출");
+        }
+
+        function doBlur() {
+            console.log("onBlur 호출");
+            var input_value = document.getElementById("text1");
+
+            if(input_value.value === "")
+                alert("내용을 입력해주세요.");
+        }
+
+        function doChange() {
+            console.log("doChange() 호출");
+            var select_value = document.getElementById("select1");
+            console.log(select_value.value);
+        }
+
+        function doChange1(obj) {
+            console.log(obj.value);
+        }
+
+        function doKeydown(event) {
+            // console.log("doKeydown 호출");
+            // console.log(event.keyCode);
+            if(event.keyCode === 13) {
+                console.log("[Enter] Click");
+                doSearch();
+            }
+        }
+
+        function doSearch() {
+            console.log("조회 시작");
+        }
+
+    </script>
+</body>
+</html>
